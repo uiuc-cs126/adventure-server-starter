@@ -24,43 +24,34 @@ class NewGame {
 }
 
 /**
- * Represents a request to add items.
+ * Represents a request to complete a certain command
  */
-class AddItems {
-    private List<String> items;
+class Command {
+    /** Name of the command to be completed (ex: "go") */
+    private String commandName;
+    /** Subject of the command to be completed (ex: "East") */
+    private String commandValue;
 
-    public AddItems() { }
+    public Command() { }
 
-    public AddItems(List<String> items) {
-        this.setItems(items);
+    public Command(String commandName, String commandValue) {
+        this.commandName = commandName;
+        this.commandValue = commandValue;
     }
 
-    public List<String> getItems() {
-        return items;
+    public String getCommandName() {
+        return this.commandName;
     }
 
-    public void setItems(List<String> items) {
-        this.items = items;
-    }
-}
-
-/**
- * Represents a request move in a direction.
- */
-class Go {
-    private String direction;
-
-    public Go() { }
-
-    public Go(String direction) {
-        setDirection(direction);
+    public String getCommandValue() {
+        return commandValue;
     }
 
-    public String getDirection() {
-        return direction;
+    public void setCommandName(String commandName) {
+        this.commandName = commandName;
     }
 
-    public void setDirection(String direction) {
-        this.direction = direction;
+    public void setCommandValue(String commandValue) {
+        this.commandValue = commandValue;
     }
 }

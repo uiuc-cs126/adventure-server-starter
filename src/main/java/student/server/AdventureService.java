@@ -1,8 +1,6 @@
 package student.server;
 
-import java.io.OutputStream;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import student.adventure.Adventure;
@@ -72,42 +70,6 @@ public class AdventureService {
      * @return true if the game was found and destroyed; false otherwise.
      */
     boolean destroyGame(int id) {
-        // TODO: Complete this method.
-        return false;
-    }
-
-    /**
-     * Attempts to move in the specified direction.
-     * @param id the id of the game.
-     * @param direction the direction to move.
-     * @param logger logs anything the Adventure game reports (e.g., invalid direction).
-     * @return the updated game; null if something went wrong.
-     */
-    Adventure goInDirection(int id, String direction, OutputStream logger) {
-        // TODO: Complete this method.
-        return null;
-    }
-
-    /**
-     * adds/updates items to the current room of the game with the corresponding id.
-     * if an item already exists, the item should not be added again.
-     * @param id the id of the game.
-     * @param items list of items to add.
-     * @return true if items were successfully added; false otherwise.
-     */
-    boolean addItems(int id, List<String> items) {
-        // TODO: Complete this method.
-        return false;
-    }
-
-    /**
-     * adds/updates items to the current room of the game with the corresponding id.
-     * if an item already exists, the item should not be added again.
-     * @param id the id of the game.
-     * @param items list of items to add.
-     * @return true if items were successfully added; false otherwise.
-     */
-    boolean removeItem(int id, String item) {
         // TODO: Complete this method.
         return false;
     }

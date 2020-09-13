@@ -1,6 +1,7 @@
 package student.server;
 
-import student.adventure.Room;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This class is used to report any errors.
@@ -23,43 +24,86 @@ class Error {
     }
 }
 
+
 /**
- * Represents the current state of the game.
+ * Represents result of a command.
  */
-class GameStatus {
+class CommandResult {
+    // Game id
     private int id;
-    private Room currentRoom;
-    private boolean isOver;
 
-    public GameStatus() { }
+    // Error message to display to user
+    private String error;
+    // Message to display to user
+    private String message;
+    // Image URL to image to display to user
+    private String imageUrl;
+    // YouTube video URL for audio that will play for user
+    private String videoUrl;
 
-    public GameStatus(int id, Room currentRoom, boolean isOver) {
-        this.id = id;
-        this.currentRoom = currentRoom;
-        this.isOver = isOver;
-    }
+    // Map containing state that will be displayed in table to the user
+    private Map<String, String> state;
+    // Map containing command names (ex: "go") mapped to list of command values (ex: ["North", "South"])
+    private Map<String, List<String>> commandOptions;
+
+    public CommandResult() { }
+
+    // TODO: Implement your own constructor
 
     public int getId() {
         return id;
     }
 
-    public boolean getIsOver() {
-        return isOver;
+    public String getError() {
+        return error;
     }
 
-    public Room getCurrentRoom() {
-        return currentRoom;
+    public String getMessage() {
+        return message;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public String getVideoUrl() {
+        return videoUrl;
+    }
+
+    public Map<String, String> getState() {
+        return state;
+    }
+
+    public Map<String, List<String>> getCommandOptions() {
+        return commandOptions;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setIsOver(boolean isOver) {
-        this.isOver = isOver;
+    public void setError(String error) {
+        this.error = error;
     }
 
-    public void setCurrentRoom(Room currentRoom) {
-        this.currentRoom = currentRoom;
+    public void setMessage(String message) {
+        this.message = message;
     }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setState(Map<String, String> state) {
+        this.state = state;
+    }
+
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+    }
+
+    public void setCommandOptions(Map<String, List<String>> commandOptions) {
+        this.commandOptions = commandOptions;
+    }
+
 }
